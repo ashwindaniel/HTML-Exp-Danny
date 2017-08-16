@@ -1,20 +1,20 @@
 body {
-    background-image: url("../img/background_red_yel.jpg");
+    background-image: url("../../img/background_red_yel.jpg");
     background-position: center center;
-    display: block;
+    /* display: block; */
 }
 
-.navigationBar {
+.navigationBarNoDrop {
     width: 100%;
     overflow: hidden;
     background-color: transparent;
     position: relative;
-    display: inline-block;
+    float: left
 }
 
-.navigationBar a {
+.navigationBarNoDrop a {
+    /* float: left; */
     float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
     transition: all 0.3s ease;
@@ -24,44 +24,58 @@ body {
     opacity: 0.5;
 }
 
-.navigationBar a:hover {
+.navigationBarDrop {
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    float: left
+}
+
+.navigationBarNoDrop a:hover,
+.navigationBarDrop:hover {
     background-color: lightgoldenrodyellow;
     color: black;
     opacity: 1;
 }
 
-.navigationBar a.active {
+
+/* .navigationBar a.active {
     background-color: lightcoral;
     color: whitesmoke;
     opacity: 1;
-}
+} */
 
-.navigationBar-content {
+.navigationBarDrop-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: lightgreen;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-.navigationBar-content a {
+.navigationBarDrop-content a {
+    display: block;
     color: black;
-    padding: 12px 16px;
+    text-align: center;
+    /* transition: all 0.3s ease; */
+    padding: 14px 16px;
     text-decoration: none;
-    display: block;
+    font-size: 17px;
+    /* opacity: 0.5; */
 }
 
-.navigationBar-content a:hover {
-    background-color: #f1f1f1
+.navigationBarDrop a:hover {
+    /* display: block;
+    position: absolute; */
+    background-color: darkolivegreen;
+    /* min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; */
 }
 
-.navigationBar:hover .navigationBar-content {
-    display: block;
-}
-
-.navigationBar:hover .dropbtn {
-    background-color: #3e8e41;
+.navigationBarDrop:hover .navigationBarDrop-content {
+    display: block
 }
 
 footer {
