@@ -38,6 +38,4 @@ angular.module('DemoModule', ['ngRoute'])
             $scope.longitude = position.coords.longitude;
             $scope.dataloaded = true;
         }
-
-
     });
