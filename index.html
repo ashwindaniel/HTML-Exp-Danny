@@ -17,28 +17,30 @@
 </head>
 
 <body ng-app="DemoModule">
-    <section class="container-fluid">
-        <article class="navigationBarNoDrop">
+    <header class="container-fluid">
+        <nav class="navigationBarNoDrop">
             <a href='#!/first'>First</a>
             <a href='#!/target'>Target</a>
             <a href='#!/forms'>Forms</a>
             <a href="#!/location">Location</a>
-            <div class="navigationBarDrop">
+            <section class="navigationBarDrop">
                 <a href="#">Home</a>
-                <div class="navigationBarDrop-content">
+                <section class="navigationBarDrop-content">
                     <a href="#">one</a>
                     <a href="#">two</a>
                     <a href="#">three</a>
-                </div>
-            </div>
-        </article>
+                </section>
+            </section>
+        </nav>
+    </header>
+    <article>
+        <div class="container" ng-view></div>
+    </article>
 
-        <article>
-            <div ng-view></div>
-        </article>
-    </section>
     <footer>
-        <img src="img/aspirelogo.png" alt="Aspire Systems">ashwin.daniel@aspiresys.com
+        <address>
+                for details contact<br><a href="www.aspiresys.com"><img src="img/aspirelogo2.png" alt="Aspire Systems" width="60px" height="30px">ashwin.daniel@aspiresys.com</a>
+        </address>
     </footer>
 
 </body>

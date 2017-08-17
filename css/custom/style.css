@@ -1,6 +1,8 @@
 body {
     background-image: url("../../img/background_red_yel.jpg");
     background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
     /* display: block; */
 }
 
@@ -38,13 +40,6 @@ body {
     opacity: 1;
 }
 
-
-/* .navigationBar a.active {
-    background-color: lightcoral;
-    color: whitesmoke;
-    opacity: 1;
-} */
-
 .navigationBarDrop-content {
     display: none;
     position: absolute;
@@ -78,11 +73,51 @@ body {
     display: block
 }
 
+.formBox {
+    background-color: lightcoral;
+    border-radius: 100px;
+    padding: 50px;
+}
+
+.formBox input[type=text],
+select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formBox input[type=text]:hover {
+    background-color: lightgrey;
+}
+
+.formBox button[type=submit] {
+    width: 50%;
+    background-color: #50AE50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formBox button[type=submit]:hover {
+    background-color: #026702;
+}
+
+.formBox label {
+    color: wheat;
+}
+
 footer {
     position: fixed;
     right: 5px;
     bottom: 0px;
-    font-size: 10px;
+    font-size: 9px;
     color: rebeccapurple;
 }
 
@@ -93,6 +128,6 @@ footer a {
 }
 
 footer a:hover {
-    font-size: 20px;
+    font-size: 11px;
     opacity: 1;
 }
