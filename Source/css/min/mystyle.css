@@ -1,0 +1,275 @@
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.container a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer {
+    position: fixed;
+    right: 5px;
+    bottom: 0px;
+    font-size: 10px;
+    color: rebeccapurple;
+}
+
+footer a {
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    font-size: 10px;
+}
+
+footer a:hover {
+    font-size: 20px;
+    opacity: 1;
+}
+body {
+    background-image: url("../../img/background_red_yel.jpg");
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    /* display: block; */
+}
+
+#map {
+    height: 500px;
+}
+
+.map {
+    height: 500px;
+}
+
+.navigationBarNoDrop {
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    float: left;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.50);
+    z-index: 10;
+}
+
+.navigationBarNoDrop a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    opacity: 0.5;
+}
+
+.navigationBarDrop {
+    color: black;
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    float: left;
+}
+
+.navigationBarDrop a {
+    color: black;
+}
+
+.navigationBarNoDrop a:hover,
+.navigationBarDrop:hover {
+    background-color: lightgoldenrodyellow;
+    color: black;
+    opacity: 1;
+}
+
+.navigationBarDrop-content {
+    display: none;
+    position: relative;
+    background-color: lightgreen;
+    /* min-width: 160px; */
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.navigationBarDrop-content a {
+    display: block;
+    color: black;
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.navigationBarDrop a:hover {
+    background-color: darkolivegreen;
+}
+
+.navigationBarDrop:hover .navigationBarDrop-content {
+    display: inline-block;
+}
+
+.formBox {
+    background-color: rgba(255, 255, 255, 0.20);
+    border-radius: 100px;
+    padding: 50px;
+}
+
+.formBox input[type=text],
+.formBox input[type=email],
+.formBox input[type=password],
+.formBox input[type=list],
+.formBox input[type=number],
+.formBox textarea,
+select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(240, 128, 128, 0.74);
+    border: 1px solid whitesmoke;
+    -webkit-transition: all 0.9s ease;
+    -moz-transition: all 0.9s ease;
+    transition: all 0.9s ease;
+}
+
+.formBox input[type=text]:focus,
+.formBox input[type=email]:focus,
+.formBox input[type=password]:focus,
+.formBox input[type=list]:focus,
+.formBox input[type=number]:focus,
+.formBox textarea:focus {
+    background-color: rgba(211, 211, 211, 0.70);
+    border: 1px solid black;
+}
+
+.formBox input[type=text]:invalid,
+.formBox input[type=email]:invalid,
+.formBox input[type=password]:invalid,
+.formBox input[type=list]:invalid,
+.formBox input[type=number]:invalid {
+    background-color: rgba(237, 228, 60, 0.72);
+    border: 1px solid red;
+}
+
+
+/* .formBox input[type=text]:valid,
+.formBox input[type=email]:valid,
+.formBox input[type=password]:valid,
+.formBox input[type=list]:valid {
+    background-color: rgba(44, 240, 41, 0.66);
+    border: 1px solid black;
+} */
+
+.formBox input[type=radio],
+.formBox input[type=checkbox] {
+    margin: 5px 0;
+    display: inline-block;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+.formBox input[type=radio]:hover,
+.formBox input[type=checkbox]:hover {
+    background-color: lightgrey;
+}
+
+.formBox button[type=submit] {
+    width: 50%;
+    background-color: #50AE50;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formBox button[type=submit]:hover {
+    background-color: #026702;
+}
+
+.formBox label {
+    color: whitesmoke;
+}
+
+footer {
+    position: fixed;
+    right: 5px;
+    bottom: 0px;
+    font-size: 9px;
+}
+
+footer a {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    font-size: 10px;
+    color: rebeccapurple;
+}
+
+footer a:hover {
+    font-size: 11px;
+    opacity: 1;
+    color: darkslategray;
+}
+.prop {
+  width: 200%; }
