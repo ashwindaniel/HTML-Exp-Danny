@@ -26,7 +26,7 @@
     3. [x] Making Enviroment for linting and minifying
     4. [x] Automate Building tool for the project
 
-## **The build requires Node.js ^6.9.1 at the time of development will update if need be**
+> The build requires Node.js ^6.9.1 at the time of development will update if need be
 
 ### **Dependencies**
 {
@@ -46,3 +46,27 @@
 -    "map-stream": "0.0.7",
 }
 
+## Structure of the build
+-   Final *ALL MINIFIED FILES PRODUCTION FILES ARE HERE*
+    - css *a css files minified*
+    - js *a js files minified*
+    - img *images unsed in app*
+    - media *was be used to keep all the media elements*
+    - pages *all the pages in the app*
+    - index.html *SPA that acts as renderer*
+- Source *SOURCE FILES THAT WILL BE USED TO BUILD Final Codes*
+    - css
+    - img
+    - js
+    - media
+    - pages
+    - index.html
+- node_modules *npm repo*
+- package.json *npm project descriptor*
+- gulpfile.js *The file that consists of build enviroment codes for gulp*
+
+## Behaviour
+On node terminal enter `gulp` to run building
+On build completion **Gulp** will automatically run **browser-sync** that provides web server and launches the app automatically
+edit in `index.html`, `js`, `scss`, `pages`& other folder and changes will automatically reflect in `Final`
+any errors in javascript will show in linting on console.
