@@ -28,8 +28,9 @@
 
 ## **The build requires Node.js ^6.9.1 at the time of development will update if need be**
 
-### **Dev Dependencies**
+### **Dependencies**
 {
+-    "node": "^6.9.1",
 -    "browser-sync": "^2.18.13",
 -    "gulp": "^3.9.1",
 -    "gulp-clean-css": "^3.7.0",
@@ -42,6 +43,6 @@
 -    "gulp-util": "^3.0.8",
 -    "jshint": "^2.9.5",
 -    "jshint-stylish": "^2.2.1",
--    "map-stream": "0.0.7"
+-    "map-stream": "0.0.7",
 }
 
