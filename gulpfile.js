@@ -11,7 +11,7 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('jshint', function() {
     console.log("Start linting");
-    var js = gulp.src('Source/js/controller/**/*.js')
+    var js = gulp.src('Source/js/controller/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'));
     console.log("End linting");
@@ -26,12 +26,15 @@ gulp.task('jscopy', function() {
             ext: {
                 src: '-src.js',
                 min: '-min.js'
+            },
+            mangle: false,
+            compress: {
+                drop_console: true, //drop console.logs
+                unused: true //drop unused variables
             }
         }))
-        .pipe(gulp.dest('Source/js/min'));
-    js = gulp.src('Source/js/min/myapp-min.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('Final/js'));
+        .pipe(gulp.dest('Source/js/min'))
+        .pipe(gulp.dest('Final/js/controller'));
     console.log("End copying javascripts");
     return js;
 });
@@ -66,6 +69,8 @@ gulp.task('watching', function() {
 
     gulp.watch('Source/js/controller/**/*.js', ['jshint', 'jscopy']);
 
+    gulp.watch('Source/css/*.css', ['csscopy']);
+
     gulp.watch('Source/scss/*.scss', ['sass', 'csscopy']);
 
     gulp.watch('Source/index.html', function() {
@@ -98,6 +103,12 @@ gulp.task('watching', function() {
             .pipe(gulp.dest('Final/pages'));
     });
 
+    gulp.watch('Source/media/**/*', function() {
+        console.log("Media updated");
+        gulp.src('Source/media/**/*')
+            .pipe(gulp.dest('Final/media'));
+    });
+
 
 });
 
@@ -105,6 +116,7 @@ gulp.task('build', ['jscopy', 'csscopy'], function() {
     console.log("Init Browser-sync");
     browserSync.init({
         server: "./Final"
+            // directory: true
     });
 
     console.log("Starting initial setup");
@@ -123,6 +135,9 @@ gulp.task('build', ['jscopy', 'csscopy'], function() {
 
     gulp.src('Source/pages/**/*')
         .pipe(gulp.dest('Final/pages'));
+
+    gulp.src('Source/media/**/*')
+        .pipe(gulp.dest('Final/media'));
 
     console.log("Initial setup completed");
 });

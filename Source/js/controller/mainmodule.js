@@ -2,20 +2,26 @@ angular.module('DemoModule', ['ngRoute'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/first', {
-                templateUrl: "../pages/first.html"
+                templateUrl: "../../pages/first.html"
             })
             .when('/target', {
-                templateUrl: '../pages/target.html'
+                templateUrl: '../../pages/target.html'
             })
             .when('/forms', {
-                templateUrl: '../pages/forms.html'
+                templateUrl: '../../pages/forms.html'
             })
             .when('/location', {
-                templateUrl: '../pages/location.html',
-                controller: 'LocationCtrl'
+                templateUrl: '../../pages/location.html'
+                    // controller: 'LocationCtrl'
+            })
+            .when('/video', {
+                templateUrl: '../../pages/video.html'
+            })
+            .when('/audio', {
+                templateUrl: '../../pages/audio.html'
             })
             .otherwise({
-                templateUrl: '../pages/start.html'
+                templateUrl: '../../pages/start.html'
             });
     })
     .directive('gmaps', function factory($timeout) {
@@ -75,6 +81,7 @@ angular.module('DemoModule', ['ngRoute'])
         $scope.runLocation = function() {
             if (navigator.geolocation) {
                 $scope.position = navigator.geolocation.getCurrentPosition(storeLocation);
+                console.log("inside map");
                 console.log(map);
                 document.getElementById("map");
             } else {
@@ -94,5 +101,4 @@ angular.module('DemoModule', ['ngRoute'])
                 zoom: 15
             });
         }
-
     });
