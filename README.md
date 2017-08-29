@@ -47,23 +47,23 @@
 }
 
 ## Structure of the build
--   Final *ALL MINIFIED FILES PRODUCTION FILES ARE HERE*
-    - css *a css files minified*
-    - js *a js files minified*
-    - img *images unsed in app*
-    - media *was be used to keep all the media elements*
-    - pages *all the pages in the app*
-    - index.html *SPA that acts as renderer*
-- Source *SOURCE FILES THAT WILL BE USED TO BUILD Final Codes*
+-   Final :*ALL MINIFIED FILES PRODUCTION FILES ARE HERE*
+    - css :*a css files minified*
+    - js :*a js files minified*
+    - img :*images unsed in app*
+    - media :*was be used to keep all the media elements*
+    - pages :*all the pages in the app*
+    - index.html :*SPA that acts as renderer*
+- Source :*SOURCE FILES THAT WILL BE USED TO BUILD Final Codes*
     - css
     - img
     - js
     - media
     - pages
     - index.html
-- node_modules *npm repo*
-- package.json *npm project descriptor*
-- gulpfile.js *The file that consists of build enviroment codes for gulp*
+- node_modules :*npm repo*
+- package.json :*npm project descriptor*
+- gulpfile.js :*The file that consists of build enviroment codes for gulp*
 
 ## Behaviour
 On node terminal enter `gulp` to run building
