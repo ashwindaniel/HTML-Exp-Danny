@@ -26,9 +26,9 @@
     3. [x] Making Enviroment for linting and minifying
     4. [x] Automate Building tool for the project
 
-## ** The build requires Node.js ^6.9.1 at the time of development will update if need be **
+## **The build requires Node.js ^6.9.1 at the time of development will update if need be**
 
-## ** Dev Dependencies **
+### **Dev Dependencies**
 {
 -    "browser-sync": "^2.18.13",
 -    "gulp": "^3.9.1",
@@ -45,4 +45,3 @@
 -    "map-stream": "0.0.7"
 }
 
- 
