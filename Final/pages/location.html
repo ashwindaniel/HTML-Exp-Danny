@@ -1,0 +1,13 @@
+<section>
+    <h1>What's My Location</h1>
+    <button type="button" ng-click="runLocation()" class="btn btn-info">Click me and find</button>
+    </br>
+    <article ng-hide="!dataloaded">
+        <h3>Latitude = {{latitude}}</h3>
+        <br>
+        <h3>Longitude = {{longitude}}</h3>
+    </article>
+    <br>
+    <div id="map" style="height: 100%;"></div>
+    <!-- <button type="button" class="btn btn-info" ng-click="runMap()">Click to get the Map of it</button> -->
+</section>

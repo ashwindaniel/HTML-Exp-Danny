@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minify = require('gulp-minify');
 var cleanCSS = require('gulp-clean-css');
+var browserSync = require('browser-sync').create();
 
 gulp.task('jshint', function() {
     console.log("Start linting");
@@ -40,7 +41,8 @@ gulp.task('sass', function() {
     console.log("Converting scss to css");
     var css = gulp.src('Source/scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('Source/css/custom'));
+        .pipe(gulp.dest('Source/css/custom'))
+        .pipe(browserSync.stream());
     console.log("Conversion complete");
     return css;
 });
@@ -59,27 +61,70 @@ gulp.task('csscopy', function() {
 
 
 gulp.task('watching', function() {
-    gulp.watch('Source/js/controller/**/*.js', ['jshint', 'jscopy']);
-    gulp.watch('Source/scss/*.scss', ['sass', 'csscopy']);
-});
 
-gulp.task('build', function() {
+    gulp.watch('Final/**/*').on('change', browserSync.reload);
+
+    gulp.watch('Source/js/controller/**/*.js', ['jshint', 'jscopy']);
+
+    gulp.watch('Source/scss/*.scss', ['sass', 'csscopy']);
+
     gulp.watch('Source/index.html', function() {
+        console.log("Index.html updated");
         gulp.src('Source/index.html')
-            .pipe(gulp.dest('Final/index.html'));
+            .pipe(gulp.dest('Final'));
     });
-    gulp.watch('Source/pages/**/*', function() {
+
+    gulp.watch('Source/js/dependencies/**/*', function() {
+        console.log("JS Dependencies updated");
         gulp.src('Source/js/dependencies/**/*')
             .pipe(gulp.dest('Final/js/dependencies'));
     });
+
+    gulp.watch('Source/css/dependencies/**/*', function() {
+        console.log("CSS Dependencies updated");
+        gulp.src('Source/css/dependencies/**/*')
+            .pipe(gulp.dest('Final/css/dependencies'));
+    });
+
     gulp.watch('Source/img/**/*', function() {
+        console.log("Images folder updated");
         gulp.src('Source/img/**/*')
             .pipe(gulp.dest('Final/img'));
     });
+
     gulp.watch('Source/pages/**/*', function() {
+        console.log("HTML Pages updated");
         gulp.src('Source/pages/**/*')
             .pipe(gulp.dest('Final/pages'));
     });
+
+
 });
 
-gulp.task('default', ['watching'], function() {});
+gulp.task('build', ['jscopy', 'csscopy'], function() {
+    console.log("Init Browser-sync");
+    browserSync.init({
+        server: "./Final"
+    });
+
+    console.log("Starting initial setup");
+
+    gulp.src('Source/index.html')
+        .pipe(gulp.dest('Final'));
+
+    gulp.src('Source/js/dependencies/**/*')
+        .pipe(gulp.dest('Final/js/dependencies'));
+
+    gulp.src('Source/css/dependencies/**/*')
+        .pipe(gulp.dest('Final/css/dependencies'));
+
+    gulp.src('Source/img/**/*')
+        .pipe(gulp.dest('Final/img'));
+
+    gulp.src('Source/pages/**/*')
+        .pipe(gulp.dest('Final/pages'));
+
+    console.log("Initial setup completed");
+});
+
+gulp.task('default', ['build', 'watching'], function() {});
