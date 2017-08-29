@@ -30,6 +30,7 @@
 
 ### **Dependencies**
 {
+-    "angularjs": "^1.6.5"
 -    "node": "^6.9.1",
 -    "browser-sync": "^2.18.13",
 -    "gulp": "^3.9.1",
