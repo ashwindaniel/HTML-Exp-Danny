@@ -1,4 +1,3 @@
-var x;
 angular.module('DemoModule', ['ngRoute'])
     .config(function($routeProvider) {
         $routeProvider
