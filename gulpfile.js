@@ -13,7 +13,8 @@ gulp.task('jshint', function() {
     console.log("Start linting");
     var js = gulp.src('Source/js/controller/*.js')
         .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'));
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(jshint.reporter('fail'));
     console.log("End linting");
     return js;
 });

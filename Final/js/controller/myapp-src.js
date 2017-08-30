@@ -1,12 +1,18 @@
-var x = 0;
+var x;
 angular.module('DemoModule', ['ngRoute'])
     .config(function($routeProvider) {
         $routeProvider
-            .when('/first', {
+            .when('/', {
+                templateUrl: "../../pages/first.html"
+            })
+            .when('/intro', {
                 templateUrl: "../../pages/first.html"
             })
             .when('/target', {
                 templateUrl: '../../pages/target.html'
+            })
+            .when('/about', {
+                templateUrl: '../../pages/about.html'
             })
             .when('/forms', {
                 templateUrl: '../../pages/forms.html'
@@ -22,7 +28,7 @@ angular.module('DemoModule', ['ngRoute'])
                 templateUrl: '../../pages/audio.html'
             })
             .otherwise({
-                templateUrl: '../../pages/start.html'
+                templateUrl: '../../pages/default.html'
             });
     })
     .controller('DemoCtrl', function($scope) {
@@ -35,12 +41,10 @@ angular.module('DemoModule', ['ngRoute'])
         $scope.dataloaded = false;
         var map;
         $scope.renderMap = function() {
+            $scope.dataloaded = true;
             if (navigator.geolocation) {
                 $scope.position = navigator.geolocation.getCurrentPosition(storeLocation);
                 console.log("inside map");
-                console.log(map);
-                console.log($scope.latitude);
-                console.log($scope.longitude);
                 document.getElementById("map");
             } else {
                 alert("Your browser doesn't supports it!");
@@ -50,11 +54,15 @@ angular.module('DemoModule', ['ngRoute'])
         function storeLocation(position) {
             $scope.latitude = position.coords.latitude;
             $scope.longitude = position.coords.longitude;
-            $scope.dataloaded = true;
+            $scope.reloadMap();
+            console.log("inside store location");
+        }
+        $scope.reloadMap = function() {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: new google.maps.LatLng($scope.latitude, $scope.longitude),
                 zoom: $scope.zoom,
                 mapTypeId: google.maps.MapTypeId.HYBRID
             });
-        }
+        };
+
     });
