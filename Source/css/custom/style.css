@@ -9,9 +9,6 @@ fieldset {
   box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.5);
   color: white; }
 
-#map {
-  height: 100%; }
-
 .navigationBarNoDrop {
   width: 100%;
   overflow: hidden;

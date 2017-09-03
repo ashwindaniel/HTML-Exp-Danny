@@ -1,92 +1,31 @@
-audio {
+audio,
+video {
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
-  -moz-box-shadow: 2px 2px 4px 0px #006773;
-  -webkit-box-shadow: 2px 2px 4px 0px #006773;
-  box-shadow: 2px 2px 4px 0px #006773;
+  -moz-box-shadow: 2px 2px 4px 0px black;
+  -webkit-box-shadow: 2px 2px 4px 0px black;
+  box-shadow: 2px 2px 4px 0px black;
   -moz-border-radius: 7px 7px 7px 7px;
   -webkit-border-radius: 7px 7px 7px 7px;
   border-radius: 7px 7px 7px 7px; }
 
 audio:hover,
 audio:focus,
-audio:active {
-  -webkit-box-shadow: 15px 15px 20px rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: 15px 15px 20px rgba(255, 255, 255, 0.5);
-  box-shadow: 15px 15px 20px rgba(255, 255, 255, 0.5);
+audio:active,
+video:hover,
+video:focus,
+video:active {
+  -webkit-box-shadow: 15px 15px 20px red;
+  -moz-box-shadow: 15px 15px 20px red;
+  box-shadow: 15px 15px 20px red;
   -webkit-transform: 0.3s scale(1.05);
   -moz-transform: 0.3s scale(1.05);
   transform: 0.3s scale(1.05); }
 
-.container {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
-  background-color: transparent; }
-
-.container a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none; }
-
-.dropdown {
-  float: left;
-  overflow: hidden; }
-
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit; }
-
-.container a:hover,
-.dropdown:hover .dropbtn {
-  background-color: red; }
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1; }
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left; }
-
-.dropdown-content a:hover {
-  background-color: #ddd; }
-
-.dropdown:hover .dropdown-content {
-  display: block; }
-
-footer {
-  position: fixed;
-  right: 5px;
-  bottom: 0px;
-  font-size: 10px;
-  color: rebeccapurple; }
-
-footer a {
-  transition: all 0.3s ease;
-  opacity: 0.5;
-  font-size: 10px; }
-
-footer a:hover {
-  font-size: 20px;
-  opacity: 1; }
+.map {
+  height: 500px; }
 
 body {
   background-image: url("../../img/background_red_yel.jpg");
@@ -98,9 +37,6 @@ fieldset {
   display: block;
   box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.5);
   color: white; }
-
-#map {
-  height: 100%; }
 
 .navigationBarNoDrop {
   width: 100%;
