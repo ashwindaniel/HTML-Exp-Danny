@@ -1,20 +1,24 @@
-body{
-    background-color: rgba(0, 255, 255, 0.30);
+body {
+    background-color: lightgray;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-p{
+
+p {
     text-align: justify;
     font-size: 20px;
 }
+
 footer {
     float: right;
     right: 5px;
     bottom: 0px;
     font-size: 12px;
 }
-table{
+
+table {
     font-size: 100px;
 }
 
@@ -27,12 +31,13 @@ table{
 .formBox input[type=checkbox] {
     margin: 5px 0;
 }
+
 .formBox input[type=text],
 .formBox input[type=email],
 .formBox input[type=password],
 .formBox input[type=list],
 .formBox input[type=number],
-.formBox textarea{
+.formBox textarea {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
