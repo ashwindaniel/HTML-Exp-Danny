@@ -59,7 +59,6 @@ table {
 }
 
 .formBox {
-    border-radius: 100px;
     padding: 50px;
 }
 
@@ -83,4 +82,13 @@ select {
 .formBox input[type=image] {
     width: 40px;
     height: 40px;
+}
+
+table label {
+    font-size: 18px;
+    padding: 10px;
+}
+
+table input {
+    width: 10px;
 }

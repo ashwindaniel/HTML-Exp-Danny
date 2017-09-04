@@ -46,8 +46,8 @@ angular.module('DemoModule', ['ngRoute'])
             $scope.dataloaded = true;
             if (navigator.geolocation) {
                 $scope.position = navigator.geolocation.getCurrentPosition(storeLocation);
-                // console.log("inside map");
-                document.getElementById("map");
+                console.log("inside map");
+                // document.getElementById("map");
             } else {
                 alert("Your browser doesn't supports it!");
             }

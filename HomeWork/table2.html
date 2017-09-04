@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <form class="formBox">
+        <fieldset>
+            <legend>Form Inputs</legend>
+            <table>
+                <tr>
+                    <td> <label draggable="true" for="textBox">Enter Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="textBox" name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z]+">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label draggable="true" for="textBox">Enter Place:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="textBox" name="Enter Text" value="Chennai" placeholder="Your Text" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label draggable="true" for="radioButton">Gender:</label>
+
+                    </td>
+                    <td>
+                        <input type="radio" id="radioButton" name="choose" value="okay" checked>Male<br>
+                        <input type="radio" id="radioButton" name="choose" value="good">Female<br>
+                    </td>
+                </tr>
+
+
+                <label draggable="true" for="check">Employee status:</label>
+                <br>
+                <input type="checkbox" id="check" name="select" value="Satisfied" placeholder="Check it" checked>Full Time<br>
+                <input type="checkbox" id="check" name="select" value="Unsatisfied" placeholder="Check it">Probation<br>
+                <br>
+                <br>
+
+                <label draggable="true" for="datalist">Department:</label>
+                <br>
+                <input type="list" list="array" id="datalist" name="select" placeholder="Select Your Department"><br>
+                <datalist id="array">
+                            <option value="Java"></option>
+                            <option value="DotNet"></option>
+                        </datalist>
+                <br>
+                <br>
+
+                <label draggable="true" for="select">Department:</label>
+                <br>
+                <select>
+                            <option value="Java" selected>Java</option>
+                            <option value="DotNet">DotNet</option>
+                            <option value="Other">Other</option>
+                        </select>
+                <br>
+                <br>
+
+                <label draggable="true" for="file">Pick file:</label>
+                <br>
+                <input type="file" id="file" required>
+                <br>
+                <br>
+
+                <label draggable="true" for="comment">Leave a comment:</label>
+                <br>
+                <textarea rows="5" id="comment" name="comment" placeholder=":-)" disabled></textarea>
+                <br>
+                <br>
+
+                <input type="image" src="approved.png" onclick="alert('Submit Test');">
+            </table>
+        </fieldset>
+    </form>
+</body>

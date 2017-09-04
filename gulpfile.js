@@ -117,8 +117,8 @@ gulp.task('watching', function() {
 gulp.task('build', ['jscopy', 'csscopy'], function() {
     console.log("Init Browser-sync");
     browserSync.init({
-        server: "./Final"
-            // directory: true
+        server: "./Final",
+        directory: true
     });
 
     console.log("Starting initial setup");
