@@ -14,3 +14,26 @@ footer {
     bottom: 0px;
     font-size: 12px;
 }
+table{
+    font-size: 100px;
+}
+
+.formBox {
+    border-radius: 100px;
+    padding: 50px;
+}
+
+.formBox input[type=radio],
+.formBox input[type=checkbox] {
+    margin: 5px 0;
+}
+.formBox input[type=text],
+.formBox input[type=email],
+.formBox input[type=password],
+.formBox input[type=list],
+.formBox input[type=number],
+.formBox textarea{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
