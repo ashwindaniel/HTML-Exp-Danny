@@ -1,0 +1,16 @@
+body{
+    background-color: rgba(0, 255, 255, 0.30);
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: justify;
+    font-size: 20px;
+}
+footer {
+    float: right;
+    right: 5px;
+    bottom: 0px;
+    font-size: 12px;
+}
