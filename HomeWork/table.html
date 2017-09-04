@@ -23,42 +23,25 @@
                     <br>
                     <br>
 
-                    <label draggable="true" for="email">Enter Email:</label>
+                    <label draggable="true" for="textBox">Enter Place:</label>
                     <br>
-                    <input type="email" id="email" name="Enter email" value="" placeholder="Your Email">
-                    <br>
-                    <br>
-
-                    <label draggable="true" for="password">Enter password:</label>
-                    <br>
-                    <input type="password" id="password" name="Enter password" value="" placeholder="Your Password">
-                    <br>
-                    <br>
-
-                    <label draggable="true" for="password">Confirm password:</label>
-                    <br>
-                    <input type="password" id="password" name="Enter password" value="" placeholder="Confirm again">
-                    <br>
-                    <br>
-
-                    <label draggable="true" for="tel">Phone Number:</label>
-                    <br>
-                    <input type="number" id="tel" name="Enter Tel" value="" placeholder="Enter Telephone number" min="1000000000" max="9999999999">
+                    <input type="text" id="textBox" name="Enter Text" value="Chennai" placeholder="Your Text" readonly>
                     <br>
                     <br>
 
                     <label draggable="true" for="radioButton">Select:</label>
                     <br>
-                    <input type="radio" id="radioButton" name="choose" value="okay">Okay<br>
+                    <input type="radio" id="radioButton" name="choose" value="okay" checked>Okay<br>
                     <input type="radio" id="radioButton" name="choose" value="good">Good<br>
                     <input type="radio" id="radioButton" name="choose" value="better">Better<br>
                     <input type="radio" id="radioButton" name="choose" value="best">Best
                     <br>
                     <br>
 
-                    <label draggable="true" for="check">Check:</label>
+                    <label draggable="true" for="check">Check Appropriate box:</label>
                     <br>
-                    <input type="checkbox" id="check" name="select" value="satisfied" placeholder="Check it">satisfied<br>
+                    <input type="checkbox" id="check" name="select" value="Satisfied" placeholder="Check it" checked>Satisfied<br>
+                    <input type="checkbox" id="check" name="select" value="Unsatisfied" placeholder="Check it">Need More Formating<br>
                     <br>
                     <br>
 
@@ -73,16 +56,31 @@
                     <br>
                     <br>
 
+                    <label draggable="true" for="select">Pick one:</label>
+                    <br>
+                    <select>
+                        <option value="Will not recommend">Will not recommend</option>
+                        <option value="Maybe">Maybe</option>
+                        <option value="Will definitely recommend" selected>Will definitely recommend</option>
+                    </select>
+                    <br>
+                    <br>
+
+                    <label draggable="true" for="file">Pick file:</label>
+                    <br>
+                    <input type="file" id="file" required>
+                    <br>
+                    <br>
+
                     <label draggable="true" for="comment">Leave a comment:</label>
                     <br>
-                    <textarea rows="5" id="comment" name="comment" placeholder=":-)"></textarea>
+                    <textarea rows="5" id="comment" name="comment" placeholder=":-)" disabled></textarea>
                     <br>
                     <br>
 
-                    <button type="submit">Submit</button>
+                    <input type="image" src="approved.png" onclick="alert('Submit Test');">
                 </table>
             </fieldset>
-
         </form>
     </article>
 

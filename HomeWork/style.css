@@ -4,11 +4,47 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 50px;
+    -webkit-transition: all 1s ease 0.1ms;
+    -moz-transition: all 1s ease 0.1ms;
+    transition: all 1s ease 0.1ms;
+    color: darkgoldenrod;
+}
+
+h1:hover {
+    font-size: 70px;
 }
 
 p {
     text-align: justify;
     font-size: 20px;
+    -webkit-transition: all 0.3s ease 1s;
+    -moz-transition: all 0.3s ease 1s;
+    transition: all 0.3s ease 1s;
+}
+
+p:hover {
+    font-size: 20.5px;
+}
+
+h2 {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+h2:hover {
+    font-size: 30px;
+}
+
+legend {
+    font-size: 20px;
+}
+
+label {
+    font-size: 18px;
+    padding: 10px;
+    padding-bottom: 100px;
 }
 
 footer {
@@ -37,8 +73,14 @@ table {
 .formBox input[type=password],
 .formBox input[type=list],
 .formBox input[type=number],
-.formBox textarea {
+.formBox textarea,
+select {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
+}
+
+.formBox input[type=image] {
+    width: 40px;
+    height: 40px;
 }
