@@ -1,5 +1,5 @@
 angular.module('DemoModule', ['ngRoute'])
-    .config(function ($routeProvider) {
+    .config(function($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: "../../pages/first.html"
@@ -33,16 +33,16 @@ angular.module('DemoModule', ['ngRoute'])
                 templateUrl: '../../pages/default.html'
             });
     })
-    .controller('DemoCtrl', function ($scope) {
+    .controller('DemoCtrl', function($scope) {
         $scope.message = "Target scope";
     })
-    .controller('LocationCtrl', function ($scope) {
+    .controller('LocationCtrl', function($scope) {
         $scope.latitude = 0;
         $scope.longitude = 0;
         $scope.zoom = 15;
         $scope.dataloaded = false;
         $scope.map = null;
-        $scope.renderMap = function () {
+        $scope.renderMap = function() {
             $scope.dataloaded = true;
             if (navigator.geolocation) {
                 $scope.position = navigator.geolocation.getCurrentPosition(storeLocation);
@@ -59,7 +59,7 @@ angular.module('DemoModule', ['ngRoute'])
             $scope.reloadMap();
             // console.log("inside store location");
         }
-        $scope.reloadMap = function () {
+        $scope.reloadMap = function() {
             $scope.map = new google.maps.Map(document.getElementById('map'), {
                 center: new google.maps.LatLng($scope.latitude, $scope.longitude),
                 zoom: $scope.zoom,

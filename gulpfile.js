@@ -34,7 +34,8 @@ gulp.task('jscopy', function() {
             }
         }))
         .pipe(gulp.dest('Source/js/min'))
-        .pipe(gulp.dest('Final/js/controller'));
+        .pipe(gulp.dest('Final/js/controller'))
+        .pipe(browserSync.stream());
     console.log("End copying javascripts");
     return js;
 });
@@ -44,8 +45,8 @@ gulp.task('sass', function() {
     console.log("Converting scss to css");
     var css = gulp.src('Source/scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('Source/css/custom'))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest('Source/css/custom'));
+    // .pipe(browserSync.stream());
     console.log("Conversion complete");
     return css;
 });
@@ -57,7 +58,8 @@ gulp.task('csscopy', function() {
         .pipe(gulp.dest('Source/css/min'));
     css = gulp.src('Source/css/min/mystyle.css')
         .pipe(cleanCSS())
-        .pipe(gulp.dest('Final/css'));
+        .pipe(gulp.dest('Final/css'))
+        .pipe(browserSync.stream());
     console.log("Copying css end");
     return css;
 });
