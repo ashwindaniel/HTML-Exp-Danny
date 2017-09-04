@@ -64,5 +64,4 @@ angular.module('DemoModule', ['ngRoute'])
             });
             console.log($scope.map.center);
         };
-
     });
