@@ -1,12 +1,13 @@
 audio,
 video {
+  width: 66.66667%;
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
-  -moz-box-shadow: 2px 2px 4px 0px black;
-  -webkit-box-shadow: 2px 2px 4px 0px black;
-  box-shadow: 2px 2px 4px 0px black;
+  -moz-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.7);
   -moz-border-radius: 7px 7px 7px 7px;
   -webkit-border-radius: 7px 7px 7px 7px;
   border-radius: 7px 7px 7px 7px; }
@@ -17,9 +18,9 @@ audio:active,
 video:hover,
 video:focus,
 video:active {
-  -webkit-box-shadow: 15px 15px 20px red;
-  -moz-box-shadow: 15px 15px 20px red;
-  box-shadow: 15px 15px 20px red;
+  -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   -webkit-transform: 0.3s scale(1.05);
   -moz-transform: 0.3s scale(1.05);
   transform: 0.3s scale(1.05); }
@@ -181,6 +182,9 @@ footer {
   right: 5px;
   bottom: 0px;
   font-size: 9px; }
+
+footer address {
+  float: right; }
 
 footer a {
   -webkit-transition: all 0.5s ease;

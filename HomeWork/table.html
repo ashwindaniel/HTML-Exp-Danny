@@ -10,19 +10,22 @@
 
 <body>
     <article>
-        <h1>Form valiadations here</h1>
+        <h1>Personal Info Form Example</h1>
         <form class="formBox">
             <fieldset>
                 <legend>Form Inputs</legend>
-                <label draggable="true" for="textBox">Enter Name:</label>
+                <div class="tooltip">
+                    <label draggable="true" for="textBox1"> Enter Name:</label>
+                    <br>
+                    <input type="text" id="textBox1" name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z]+">
+                    <span class="tooltiptext">Your Full Name As Per Your Respective Secondary School Certificate</span>
+                    <br>
+                    <br>
+                </div>
                 <br>
-                <input type="text" id="textBox" name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z]+">
+                <label draggable="true" for="Place">Enter Place:</label>
                 <br>
-                <br>
-
-                <label draggable="true" for="textBox">Enter Place:</label>
-                <br>
-                <input type="text" id="textBox" name="Enter Text" value="Chennai" placeholder="Your Text" readonly>
+                <input type="text" id="Place" name="Enter Text" value="Chennai" placeholder="Your Text" readonly>
                 <br>
                 <br>
 

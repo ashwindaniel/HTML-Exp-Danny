@@ -153,6 +153,9 @@ footer {
   bottom: 0px;
   font-size: 9px; }
 
+footer address {
+  float: right; }
+
 footer a {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
