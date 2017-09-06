@@ -1,0 +1,17 @@
+<article class="container-fluid">
+    <h2>Drag and Drop</h2>
+    <p>Drag the image back and forth between the two div elements.</p>
+
+    <div id="dragbox1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="../img/aspirelogo2.png" draggable="true" ondragstart="drag(event)" id="drag1">
+    </div>
+
+    <div id="dragbox2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</article>
+<article class="container-fluid">
+    <h2>Editable</h2>
+    <p>Try Edit the Content in both p elements.</p>
+
+    <label for="editable">This Element is Editable</label>
+    <p contenteditable="true" id="editable">Edit Hi to Hello Here.</p>
+</article>
