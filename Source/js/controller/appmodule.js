@@ -16,8 +16,14 @@ var app = angular.module('DemoModule', ['ngRoute'])
             .when('/forms', {
                 templateUrl: '../../pages/forms.html'
             })
-            .when('/basic', {
-                templateUrl: '../../pages/BasicTraining.html'
+            .when('/history', {
+                templateUrl: '../../pages/history.html'
+            })
+            .when('/historyFwd', {
+                templateUrl: '../../pages/historyFwd.html'
+            })
+            .when('/touch', {
+                templateUrl: '../../pages/touch.html'
             })
             .when('/location', {
                 templateUrl: '../../pages/location.html',

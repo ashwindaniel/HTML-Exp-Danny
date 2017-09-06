@@ -61,6 +61,7 @@ table {
 
 .formBox {
     padding: 50px;
+    /* width: 100%; */
 }
 
 .formBox input[type=radio],
@@ -75,7 +76,7 @@ table {
 .formBox input[type=number],
 .formBox textarea,
 select {
-    width: 70%;
+    width: 990px;
     padding: 12px 20px;
     margin: 8px 0;
 }

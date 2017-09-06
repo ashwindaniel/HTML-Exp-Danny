@@ -17,16 +17,21 @@
                 <div class="tooltip">
                     <label draggable="true" for="textBox1"> Enter Name:</label>
                     <br>
-                    <input type="text" id="textBox1" name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z]+">
+                    <input type="text" id="textBox1" name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z ]+">
                     <span class="tooltiptext">Your Full Name As Per Your Respective Secondary School Certificate</span>
                     <br>
                     <br>
                 </div>
                 <br>
-                <label draggable="true" for="Place">Enter Place:</label>
-                <br>
-                <input type="text" id="Place" name="Enter Text" value="Chennai" placeholder="Your Text" readonly>
-                <br>
+
+                <div class="tooltip">
+                    <label draggable="true" for="Place">Enter Place:</label>
+                    <br>
+                    <input type="text" id="Place" name="Enter Text" value="Chennai" placeholder="Your Text" readonly>
+                    <span class="tooltiptext">readonly: Default Chennai</span>
+                    <br>
+                    <br>
+                </div>
                 <br>
 
                 <label draggable="true" for="radioButton">Gender:</label>
@@ -36,31 +41,45 @@
                 <br>
                 <br>
 
-                <label draggable="true" for="check">Employee status:</label>
-                <br>
-                <input type="checkbox" id="check" name="select" value="Satisfied" placeholder="Check it" checked>Full Time<br>
-                <input type="checkbox" id="check" name="select" value="Unsatisfied" placeholder="Check it">Probation<br>
-                <br>
+                <div class="tooltip">
+                    <label draggable="true" for="check">Employee status:</label>
+                    <br>
+                    <input type="checkbox" id="check" name="select" value="Satisfied" placeholder="Check it" checked>Full
+                    Time
+                    <br>
+                    <input type="checkbox" id="check" name="select" value="Unsatisfied" placeholder="Check it">Probation<br>
+                    <span class="tooltiptext">Select all that are applicable</span>
+                    <br>
+                    <br>
+                </div>
                 <br>
 
-                <label draggable="true" for="datalist">Department:</label>
-                <br>
-                <input type="list" list="array" id="datalist" name="select" placeholder="Select Your Department"><br>
-                <datalist id="array">
+                <div class="tooltip">
+                    <label draggable="true" for="datalist">Department:</label>
+                    <br>
+                    <input type="list" list="array" id="datalist" name="select" placeholder="Select Your Department"><br>
+                    <span class="tooltiptext">Select one, Else Type Your Other Option</span>
+                    <datalist id="array">
                         <option value="Java"></option>
                         <option value="DotNet"></option>
                     </datalist>
-                <br>
+                    <br>
+                    <br>
+                </div>
                 <br>
 
-                <label draggable="true" for="select">Department:</label>
-                <br>
-                <select>
+                <div class="tooltip">
+                    <label draggable="true" for="select">Department:</label>
+                    <br>
+                    <select>
                         <option value="Java" selected>Java</option>
                         <option value="DotNet">DotNet</option>
                         <option value="Other">Other</option>
                     </select>
-                <br>
+                    <br>
+                    <span class="tooltiptext">Select one, If Option is not specified select other</span>
+                    <br>
+                </div>
                 <br>
 
                 <label draggable="true" for="file">Pick file:</label>
