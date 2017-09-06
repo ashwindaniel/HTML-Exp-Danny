@@ -1,4 +1,6 @@
 # to ignore all the files in final folder. The final folder is supposed
 # to be built by gulp.
 # run gulp task 'default' on node.js to build Final folder. 
-Final
+#Final
+#few other files to ignore
+.vscode
