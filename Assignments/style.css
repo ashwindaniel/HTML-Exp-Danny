@@ -48,7 +48,7 @@ label {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     float: right;
     right: 5px;
     bottom: 0px;

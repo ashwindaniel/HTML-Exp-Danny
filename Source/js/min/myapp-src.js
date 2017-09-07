@@ -58,6 +58,7 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
+var x = 10;
     app.controller('LocationCtrl', function ($scope) {
         $scope.latitude = 0;
         $scope.longitude = 0;
