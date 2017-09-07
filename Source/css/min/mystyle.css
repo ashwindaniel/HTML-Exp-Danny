@@ -37,9 +37,6 @@ video:active {
   width: 300px;
   height: 150px; }
 
-.map {
-  height: 550px; }
-
 body {
   background-image: url("../../img/background_red_yel.jpg");
   background-position: center center;
@@ -210,3 +207,6 @@ footer a:hover {
   font-size: 11px;
   opacity: 1;
   color: darkslategray; }
+
+.map {
+  height: 550px; }

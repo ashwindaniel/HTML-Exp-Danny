@@ -101,6 +101,9 @@ function historyFwd() {
 function historyGo(n) {
     window.history.go(-n);
 }
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});
 function touching() {
     var el = document.body;
     el.addEventListener("touchstart", handleStart, false);

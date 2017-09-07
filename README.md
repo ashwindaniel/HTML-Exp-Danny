@@ -7,18 +7,16 @@
     3. [x] New Features
     4. [x] Cache and other Offline things
     5. [x] Forms
-    6. [x] Drag and drop    
+    6. [x] Drag and drop
     7. [ ] Websockets
-    8. [ ] Server-sent Events
+    8. [x] Server-sent Events
     9. [x] Custom Elements (Webcomponents)
-    10. [ ] Websockets
-    11. [ ] Server-sent Events
+    10. [x] Editable content
+    11. [x] History API
     12. [x] Touch Events
     13. [x] Geolocation and Gmaps
     14. [x] Video and Audio
     15. [x] Device orientation
-    16. [x] History API
-    17. [x] Editable content
 - [x] CSS
     1. [x] Syntax of scss and css
     2. [x] Bootstrap

@@ -6,35 +6,40 @@
 
             <label draggable="true" for="textBox">Enter Name:</label>
             <br>
-            <input type="text" id="textBox" name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z ]+">
+            <input data-toggle="tooltip" data-placement="top" title="Full Name as per the Secondary School certificate" type="text" id="textBox"
+                name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z .]+">
             <br>
             <br>
 
             <label draggable="true" for="email">Enter Email:</label>
             <br>
-            <input type="email" id="email" name="Enter email" value="" placeholder="Your Email">
+            <input data-toggle="tooltip" data-placement="top" title="Valid Email ID" type="text" id="textBox" type="email" id="email"
+                name="Enter email" value="" placeholder="Your Email">
             <br>
             <br>
 
             <label draggable="true" for="password">Enter password:</label>
             <br>
-            <input type="password" id="password" name="Enter password" value="" placeholder="Your Password">
+            <input data-toggle="tooltip" data-placement="top" title="Only Alphanumeric Password Allowed" type="password" id="password"
+                name="Enter password" value="" placeholder="Your Password" pattern="[a-zA-Z0-9 .]+">
             <br>
             <br>
 
             <label draggable="true" for="password">Confirm password:</label>
             <br>
-            <input type="password" id="password" name="Enter password" value="" placeholder="Confirm again">
+            <input data-toggle="tooltip" data-placement="top" title="Confirm the same password again" type="password" id="password" name="Enter password"
+                value="" placeholder="Confirm again" pattern="[a-zA-Z0-9 .]+">
             <br>
             <br>
 
             <label draggable="true" for="tel">Phone Number:</label>
             <br>
-            <input type="number" id="tel" name="Enter Tel" value="" placeholder="Enter Telephone number" min="1000000000" max="9999999999">
+            <input data-toggle="tooltip" data-placement="top" title="Enter Telephone number without +91" type="number" id="tel" name="Enter Tel"
+                value="" placeholder="Enter Telephone number" min="1000000000" max="9999999999">
             <br>
             <br>
 
-            <label draggable="true" for="radioButton">Select:</label>
+            <label data-toggle="tooltip" data-placement="top" title="Choose best described this app" draggable="true" for="radioButton">How will you describe this web page:</label>
             <br>
             <input type="radio" id="radioButton" name="choose" value="okay">Okay<br>
             <input type="radio" id="radioButton" name="choose" value="good">Good<br>
@@ -43,7 +48,7 @@
             <br>
             <br>
 
-            <label draggable="true" for="check">Check:</label>
+            <label data-toggle="tooltip" data-placement="top" title="Select if Satisfied" draggable="true" for="check">Check:</label>
             <br>
             <input type="checkbox" id="check" name="select" value="satisfied" placeholder="Check it">satisfied<br>
             <br>
@@ -55,18 +60,19 @@
             <datalist id="array">
                 <option value="Will not recommend"></option>
                 <option value="Maybe"></option>
-                <option value="Will definitely recommend"></option>                
+                <option value="Will definitely recommend"></option>
             </datalist>
             <br>
             <br>
 
             <label draggable="true" for="comment">Leave a comment:</label>
             <br>
-            <textarea rows="5" id="comment" name="comment" placeholder=":-)"></textarea>
+            <textarea data-toggle="tooltip" data-placement="top" title="Looking forward for your comments" rows="5" id="comment" name="comment"
+                placeholder=":-)"></textarea>
             <br>
             <br>
 
-            <button type="submit">Lets get the party started</button>
+            <button type="submit" onclick="confirm('Form looks good!')">Lets get the Form started</button>
         </fieldset>
 
     </form>

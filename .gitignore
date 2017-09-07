@@ -6,3 +6,4 @@ bin
 .vscode
 #do npm install to get the node_modules in your local
 node_modules
+npm-debug.log.*
