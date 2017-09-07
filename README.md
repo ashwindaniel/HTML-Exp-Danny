@@ -82,8 +82,8 @@
 > The build requires Node.js ^6.9.1 at the time of development will update if need be
 
 ### **Dependencies**
-{
--    "angularjs": "^1.6.5"
+-{
+-    "angularjs": "^1.6.5",
 -    "node": "^6.9.1",
 -    "browser-sync": "^2.18.13",
 -    "gulp": "^3.9.1",
@@ -97,8 +97,16 @@
 -    "gulp-util": "^3.0.8",
 -    "jshint": "^2.9.5",
 -    "jshint-stylish": "^2.2.1",
--    "map-stream": "0.0.7",
-}
+-    "map-stream": "0.0.7"
+-}
+
+## Instructions
+Open Node terminal in your project directory
+On node terminal First install all dependencies using `npm install` to download all node_modules
+Then on node terminal enter `gulp` to run building
+**Gulp will automatically** create bin folder and run web server.  
+On build completion **Gulp** will automatically run **browser-sync** that provides web server and launches the app automatically.
+edit in `index.html`, `js`, `scss`, `pages`& other folder and changes will automatically reflect in `bin` folder any errors in javascript will show in linting on console.
 
 ## Structure of the build
 -   **bin** :*ALL MINIFIED FILES PRODUCTION FILES ARE HERE*
@@ -120,10 +128,3 @@
 - **package.json** :*npm project descriptor*
 - **gulpfile.js** :*The file that consists of build enviroment codes for gulp*
 
-## Instructions
-Open Node terminal in your project directory
-On node terminal First install all dependencies using `npm install` to download all node_modules
-Then on node terminal enter `gulp` to run building
-**Gulp will automatically** create bin folder and run web server.  
-On build completion **Gulp** will automatically run **browser-sync** that provides web server and launches the app automatically.
-edit in `index.html`, `js`, `scss`, `pages`& other folder and changes will automatically reflect in `bin` folder any errors in javascript will show in linting on console.
