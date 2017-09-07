@@ -101,24 +101,24 @@
 }
 
 ## Structure of the build
--   bin :*ALL MINIFIED FILES PRODUCTION FILES ARE HERE*
-    - css :*a css files minified*
-    - js :*a js files minified*
-    - img :*images unsed in app*
-    - media :*was used to keep all the media elements*
-    - pages :*all the pages in the app*
-    - index.html :*SPA that acts as renderer*
-- Source :*SOURCE FILES THAT WILL BE USED TO BUILD bin Codes are written here*
-    - css :*css sass from scss all files seperate*
-    - scss :*scss style files written to be converted into css style file by gulp*    
-    - img :*images unsed in app*
-    - js :*all javascripts are in the app in source code and in seperate js files*
-    - media :*depricated- all media content are now hosted on One Drive*
-    - pages :*template pages used in the app*
-    - index.html :*the main html page that contains renderer from angularjs*
-- node_modules :*npm repo*
-- package.json :*npm project descriptor*
-- gulpfile.js :*The file that consists of build enviroment codes for gulp*
+-   **bin** :*ALL MINIFIED FILES PRODUCTION FILES ARE HERE*
+    - **css** :*a css files minified*
+    - **js** :*a js files minified*
+    - **img** :*images unsed in app*
+    - **media** :*was used to keep all the media elements*
+    - **pages** :*all the pages in the app*
+    - **index**.html :*SPA that acts as renderer*
+- **Source** :*SOURCE FILES THAT WILL BE USED TO BUILD bin Codes are written here*
+    - **css** :*css sass from scss all files seperate*
+    - **scss** :*scss style files written to be converted into css style file by gulp*    
+    - **img** :*images unsed in app*
+    - **js** :*all javascripts are in the app in source code and in seperate js files*
+    - **media** :*depricated- **all** media content are now hosted on One Drive*
+    - **pages** :*template pages used in the app*
+    - **index**.html :*the main html page that contains renderer from angularjs*
+- **node_modules** :*npm repo*
+- **package.json** :*npm project descriptor*
+- **gulpfile.js** :*The file that consists of build enviroment codes for gulp*
 
 ## Instructions
 Open Node terminal in your project directory
