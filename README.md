@@ -109,7 +109,7 @@ On build completion **Gulp** will automatically run **browser-sync** that provid
 edit in `index.html`, `js`, `scss`, `pages`& other folder and changes will automatically reflect in `bin` folder any errors in javascript will show in linting on console.
 
 ## Structure of the build
--   **bin** :*ALL MINIFIED FILES PRODUCTION FILES ARE HERE*
+- **bin** :*ALL MINIFIED FILES PRODUCTION FILES ARE HERE*
     - **css** :*a css files minified*
     - **js** :*a js files minified*
     - **img** :*images unsed in app*
@@ -124,7 +124,12 @@ edit in `index.html`, `js`, `scss`, `pages`& other folder and changes will autom
     - **media** :*depricated- all media content are now hosted on One Drive*
     - **pages** :*template pages used in the app*
     - **index**.html :*the main html page that contains renderer from angularjs*
-- **node_modules** :*npm repo*
+- **Assignments** :*Some assignment practices not part of the app or the build*
+- **node_modules** :*npm dependencies*
 - **package.json** :*npm project descriptor*
 - **gulpfile.js** :*The file that consists of build enviroment codes for gulp*
+- **_config.yml** :*repository theme settings*
+- **.gitattribute** :*repository attributes*
+- **.gitignore** :*repository rules to ignore bin and node_module folder*
+
 
