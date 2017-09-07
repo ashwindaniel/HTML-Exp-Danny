@@ -113,7 +113,7 @@
     - **scss** :*scss style files written to be converted into css style file by gulp*    
     - **img** :*images unsed in app*
     - **js** :*all javascripts are in the app in source code and in seperate js files*
-    - **media** :*depricated- **all** media content are now hosted on One Drive*
+    - **media** :*depricated- all media content are now hosted on One Drive*
     - **pages** :*template pages used in the app*
     - **index**.html :*the main html page that contains renderer from angularjs*
 - **node_modules** :*npm repo*
