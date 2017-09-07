@@ -9,7 +9,7 @@ var minify = require('gulp-minify');
 var cleanCSS = require('gulp-clean-css');
 var browserSync = require('browser-sync').create();
 
-gulp.task('jshint', function() {
+gulp.task('jshint', function () {
     console.log("Start linting");
     var js = gulp.src('Source/js/controller/*.js')
         .pipe(jshint())
@@ -18,7 +18,7 @@ gulp.task('jshint', function() {
     return js;
 });
 
-gulp.task('jscopy', function() {
+gulp.task('jscopy', function () {
     console.log("Start copying javascripts");
     var js = gulp.src('Source/js/controller/*.js')
         .pipe(concat('myapp.js'))
@@ -34,14 +34,14 @@ gulp.task('jscopy', function() {
             }
         }))
         .pipe(gulp.dest('Source/js/min'))
-        .pipe(gulp.dest('Final/js/controller'))
+        .pipe(gulp.dest('bin/js/controller'))
         .pipe(browserSync.stream());
     console.log("End copying javascripts");
     return js;
 });
 
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     console.log("Converting scss to css");
     var css = gulp.src('Source/scss/**/*.scss')
         .pipe(sass())
@@ -51,23 +51,23 @@ gulp.task('sass', function() {
     return css;
 });
 
-gulp.task('csscopy', function() {
+gulp.task('csscopy', function () {
     console.log("Copying css start");
     var css = gulp.src('Source/css/custom/**/*.css')
         .pipe(concat('mystyle.css'))
         .pipe(gulp.dest('Source/css/min'));
     css = gulp.src('Source/css/min/mystyle.css')
         .pipe(cleanCSS())
-        .pipe(gulp.dest('Final/css'))
+        .pipe(gulp.dest('bin/css'))
         .pipe(browserSync.stream());
     console.log("Copying css end");
     return css;
 });
 
 
-gulp.task('watching', function() {
+gulp.task('watching', function () {
 
-    gulp.watch('Final/**/*').on('change', browserSync.reload);
+    gulp.watch('bin/**/*').on('change', browserSync.reload);
 
     gulp.watch('Source/js/controller/**/*.js', ['jshint', 'jscopy']);
 
@@ -75,73 +75,73 @@ gulp.task('watching', function() {
 
     gulp.watch('Source/scss/*.scss', ['sass', 'csscopy']);
 
-    gulp.watch('Source/index.html', function() {
+    gulp.watch('Source/index.html', function () {
         console.log("Index.html updated");
         gulp.src('Source/index.html')
-            .pipe(gulp.dest('Final'));
+            .pipe(gulp.dest('bin'));
     });
 
-    gulp.watch('Source/js/dependencies/**/*', function() {
+    gulp.watch('Source/js/dependencies/**/*', function () {
         console.log("JS Dependencies updated");
         gulp.src('Source/js/dependencies/**/*')
-            .pipe(gulp.dest('Final/js/dependencies'));
+            .pipe(gulp.dest('bin/js/dependencies'));
     });
 
-    gulp.watch('Source/css/dependencies/**/*', function() {
+    gulp.watch('Source/css/dependencies/**/*', function () {
         console.log("CSS Dependencies updated");
         gulp.src('Source/css/dependencies/**/*')
-            .pipe(gulp.dest('Final/css/dependencies'));
+            .pipe(gulp.dest('bin/css/dependencies'));
     });
 
-    gulp.watch('Source/img/**/*', function() {
+    gulp.watch('Source/img/**/*', function () {
         console.log("Images folder updated");
         gulp.src('Source/img/**/*')
-            .pipe(gulp.dest('Final/img'));
+            .pipe(gulp.dest('bin/img'));
     });
 
-    gulp.watch('Source/pages/**/*', function() {
+    gulp.watch('Source/pages/**/*', function () {
         console.log("HTML Pages updated");
         gulp.src('Source/pages/**/*')
-            .pipe(gulp.dest('Final/pages'));
+            .pipe(gulp.dest('bin/pages'));
     });
 
-    gulp.watch('Source/media/**/*', function() {
+    gulp.watch('Source/media/**/*', function () {
         console.log("Media updated");
         gulp.src('Source/media/**/*')
-            .pipe(gulp.dest('Final/media'));
+            .pipe(gulp.dest('bin/media'));
     });
 
 
 });
 
-gulp.task('build', ['jscopy', 'csscopy'], function() {
+gulp.task('build', ['jscopy', 'csscopy'], function () {
     console.log("Init Browser-sync");
     browserSync.init({
-        server: "./Final"
-            // directory: true
+        server: "./bin"
+        // directory: true
     });
 
     console.log("Starting initial setup");
 
     gulp.src('Source/index.html')
-        .pipe(gulp.dest('Final'));
+        .pipe(gulp.dest('bin'));
 
     gulp.src('Source/js/dependencies/**/*')
-        .pipe(gulp.dest('Final/js/dependencies'));
+        .pipe(gulp.dest('bin/js/dependencies'));
 
     gulp.src('Source/css/dependencies/**/*')
-        .pipe(gulp.dest('Final/css/dependencies'));
+        .pipe(gulp.dest('bin/css/dependencies'));
 
     gulp.src('Source/img/**/*')
-        .pipe(gulp.dest('Final/img'));
+        .pipe(gulp.dest('bin/img'));
 
     gulp.src('Source/pages/**/*')
-        .pipe(gulp.dest('Final/pages'));
+        .pipe(gulp.dest('bin/pages'));
 
     gulp.src('Source/media/**/*')
-        .pipe(gulp.dest('Final/media'));
+        .pipe(gulp.dest('bin/media'));
 
     console.log("Initial setup completed");
 });
 
-gulp.task('default', ['build', 'watching'], function() {});
+gulp.task('default', ['build', 'watching'], function () {});
