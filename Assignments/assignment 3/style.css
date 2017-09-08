@@ -1,0 +1,66 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    -webkit-transition: all 1s ease 0.1ms;
+    -moz-transition: all 1s ease 0.1ms;
+    transition: all 1s ease 0.1ms;
+    color: darkgoldenrod;
+}
+
+table {
+    background-color: rgba(211, 211, 211, 0.1);
+}
+
+.sidebar {
+    background-color: darkgrey;
+}
+
+.product {
+    color: dodgerblue;
+}
+
+.by {
+    color: darkslategray;
+}
+
+.offprice {
+    color: darkred;
+}
+
+.orgprice {
+    color: darkslategray;
+}
+
+.assure {
+    color: deepskyblue;
+}
+
+.star {
+    color: goldenrod;
+}
+
+.productcell {
+    width: 10000px;
+}
+
+h1:hover {
+    font-size: 55px;
+}
+
+img {
+    width: 200px;
+    height: 250px;
+    align-items: center;
+}
+
+footer {
+    position: relative;
+    float: right;
+    right: 5px;
+    bottom: 0px;
+    font-size: 12px;
+}
