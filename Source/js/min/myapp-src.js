@@ -7,8 +7,8 @@ var app = angular.module('DemoModule', ['ngRoute'])
             .when('/intro', {
                 templateUrl: "../../pages/first.html"
             })
-            .when('/target', {
-                templateUrl: '../../pages/target.html'
+            .when('/javascript', {
+                templateUrl: '../../pages/javascript.html'
             })
             .when('/about', {
                 templateUrl: '../../pages/about.html'
