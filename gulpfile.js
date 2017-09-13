@@ -114,11 +114,6 @@ gulp.task('watching', function () {
 
 });
 
-gulp.task('tomcat', function () {
-    gulp.src('bin/**/*')
-        .pipe(gulp.dest('../apache-tomcat-7.0.53/webapps/bin'));
-});
-
 gulp.task('build', ['jscopy', 'csscopy'], function () {
     console.log("Init Browser-sync");
     browserSync.init({
@@ -149,4 +144,4 @@ gulp.task('build', ['jscopy', 'csscopy'], function () {
     console.log("Initial setup completed");
 });
 
-gulp.task('default', ['build', 'tomcat', 'watching'], function () {});
+gulp.task('default', ['build', 'watching'], function () {});

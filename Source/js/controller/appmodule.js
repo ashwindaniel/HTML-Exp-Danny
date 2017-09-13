@@ -2,13 +2,16 @@ var app = angular.module('DemoModule', ['ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: "../../pages/first.html"
+                templateUrl: "../../pages/intro.html"
             })
             .when('/intro', {
-                templateUrl: "../../pages/first.html"
+                templateUrl: "../../pages/intro.html"
             })
             .when('/javascript', {
                 templateUrl: '../../pages/javascript.html'
+            })
+            .when('/modal', {
+                templateUrl: '../../pages/modal.html'
             })
             .when('/about', {
                 templateUrl: '../../pages/about.html'

@@ -1,57 +1,19 @@
-<script>
-    var output = "";
-    for (var i = 1; i < 8; ++i) {
-        for (var j = i; j > 0; --j) {
-            output += "#";
-        }
-        output += "<br>"
-    }
-    document.getElementById('jstriangle').innerHTML = output;
-
-    output = "";
-    var limit = 20;
-    for (k = 1; k < limit; ++k) {
-        var answer = "";
-        if (k % 3 === 0)
-            answer += "Fizz";
-        if (k % 5 === 0)
-            answer += "Buzz";
-        output += (answer || k);
-        output += "<br>";
-    }
-    document.getElementById('jsfizz').innerHTML = output;
-
-    output = "";
-    var size = 15;
-    for (x = 0; x < size; ++x) {
-        for (y = 0; y < size; ++y) {
-            if ((x + y) % 2 === 0) {
-                output += "&#9608;";
-                // output += "&#9632;";
-
-            } else {
-                output += "&nbsp;&nbsp;&nbsp;";
-                // output += "&#9634;";
-            }
-        }
-        output += "<br>";
-    }
-    document.getElementById('jschess').innerHTML = output;
-</script>
 <section class="container-fluid">
     <h1>Javascripts Examples</h1>
+    <h2>Click on the Example hedders to explore more</h2>
+    <hr>
     <section class="row">
         <section class="col-md-4">
-            <h2>Triangle</h2>
+            <h3 onclick="triangle(true)"><span class="badge badge-secondary">Triangle</span></h3>
             <div id="jstriangle"></div>
         </section>
         <hr>
         <section class="col-md-4">
-            <h2>FizzBuzz</h2>
+            <h3 onclick="fizz(true)"><span class="badge badge-secondary">FizzBuzz</span></h3>
             <div id="jsfizz"></div>
         </section>
         <section class="col-md-4">
-            <h2>Chess board</h2>
+            <h3 onclick="chess(true)"><span class="badge badge-secondary">Chess board</span></h3>
             <div id="jschess"></div>
         </section>
     </section>

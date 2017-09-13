@@ -23,19 +23,19 @@ fieldset {
 
 .navigationBarNoDrop a {
     float: left;
-    color: #f2f2f2;
+    color: ghostwhite;
     text-align: center;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
     opacity: 0.5;
 }
 
 .navigationBarDrop {
-    color: black;
+    color: ghostwhite;
     overflow: hidden;
     background-color: transparent;
     position: relative;
@@ -43,12 +43,13 @@ fieldset {
 }
 
 .navigationBarDrop a {
-    color: black;
+    font-size: 15px;
+    color: ghostwhite;
 }
 
 .navigationBarNoDrop a:hover,
 .navigationBarDrop:hover {
-    background-color: lightgoldenrodyellow;
+    background-color: firebrick;
     color: black;
     opacity: 1;
 }
@@ -77,96 +78,6 @@ fieldset {
 
 .navigationBarDrop:hover .navigationBarDrop-content {
     display: inline-block;
-}
-
-.formBox {
-    background-color: rgba(255, 255, 255, 0.20);
-    border-radius: 100px;
-    padding: 50px;
-}
-
-.formBox input[type=text],
-.formBox input[type=email],
-.formBox input[type=password],
-.formBox input[type=list],
-.formBox input[type=number],
-.formBox textarea,
-select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: rgba(240, 128, 128, 0.74);
-    border: 1px solid whitesmoke;
-    -webkit-transition: all 0.9s ease;
-    -moz-transition: all 0.9s ease;
-    transition: all 0.9s ease;
-}
-
-.formBox input[type=text]:focus,
-.formBox input[type=email]:focus,
-.formBox input[type=password]:focus,
-.formBox input[type=list]:focus,
-.formBox input[type=number]:focus,
-.formBox textarea:focus {
-    background-color: rgba(211, 211, 211, 0.70);
-    border: 1px solid black;
-}
-
-.formBox input[type=text]:invalid,
-.formBox input[type=email]:invalid,
-.formBox input[type=password]:invalid,
-.formBox input[type=list]:invalid,
-.formBox input[type=number]:invalid {
-    background-color: rgba(237, 228, 60, 0.72);
-    border: 1px solid red;
-}
-
-
-/* .formBox input[type=text]:valid,
-.formBox input[type=email]:valid,
-.formBox input[type=password]:valid,
-.formBox input[type=list]:valid {
-    background-color: rgba(44, 240, 41, 0.66);
-    border: 1px solid black;
-} */
-
-.formBox input[type=radio],
-.formBox input[type=checkbox] {
-    margin: 5px 0;
-    display: inline-block;
-    box-sizing: content-box;
-    cursor: pointer;
-}
-
-.formBox input[type=radio]:hover,
-.formBox input[type=checkbox]:hover {
-    background-color: lightgrey;
-}
-
-.formBox button[type=submit] {
-    width: 100%;
-    background-color: #50AE50;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.formBox button[type=submit]:hover {
-    background-color: #026702;
-}
-
-.formBox label {
-    color: whitesmoke;
 }
 
 footer {

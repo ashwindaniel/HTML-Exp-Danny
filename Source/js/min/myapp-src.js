@@ -2,13 +2,16 @@ var app = angular.module('DemoModule', ['ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: "../../pages/first.html"
+                templateUrl: "../../pages/intro.html"
             })
             .when('/intro', {
-                templateUrl: "../../pages/first.html"
+                templateUrl: "../../pages/intro.html"
             })
             .when('/javascript', {
                 templateUrl: '../../pages/javascript.html'
+            })
+            .when('/modal', {
+                templateUrl: '../../pages/modal.html'
             })
             .when('/about', {
                 templateUrl: '../../pages/about.html'
@@ -59,6 +62,20 @@ function drop(ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 var x = 10;
+function onsub() {
+    var obj = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        passwordcopy: document.getElementById("passwordcopy").value,
+        telephone: document.getElementById("tel").value,
+        descripttion: document.getElementById("radioButton").value,
+        satisfied: document.getElementById("check").value,
+        recommend: document.getElementById("datalist").value,
+        comments: document.getElementById("comment").value
+    };
+    console.log(obj);
+}
     app.controller('LocationCtrl', function ($scope) {
         $scope.latitude = 0;
         $scope.longitude = 0;
@@ -102,9 +119,57 @@ function historyFwd() {
 function historyGo(n) {
     window.history.go(-n);
 }
-$(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-});
+function triangle(flag) {
+    var output = "";
+    var size = prompt("Enter size", "15");
+    for (var i = 1; i < size; ++i) {
+        for (var j = i; j > 0; --j) {
+            output += "#";
+        }
+        output += "<br>";
+    }
+    if (flag)
+        document.getElementById('jstriangle').innerHTML = output;
+}
+
+function fizz(flag) {
+    output = "";
+    var limit = prompt("Enter limit", "20");
+    for (k = 1; k <= limit; ++k) {
+        var answer = "";
+        if (k % 3 === 0)
+            answer += "Fizz";
+        if (k % 5 === 0)
+            answer += "Buzz";
+        output += (answer || k);
+        output += "<br>";
+    }
+    if (flag)
+        document.getElementById('jsfizz').innerHTML = output;
+}
+
+function chess(flag) {
+    output = "";
+    var size = prompt("Enter size of board", "15");
+    for (x = 0; x < size; ++x) {
+        for (y = 0; y < size; ++y) {
+            if ((x + y) % 2 === 0) {
+                output += "&#9608;";
+                // output += "&#9632;";
+
+            } else {
+                output += "&nbsp;&nbsp;&nbsp;";
+                // output += "&#9634;";
+            }
+        }
+        output += "<br>";
+    }
+    if (flag)
+        document.getElementById('jschess').innerHTML = output;
+}
+// $(document).ready(function () {
+//     $('[data-toggle="tooltip"]').tooltip();
+// });
 function touching() {
     var el = document.body;
     el.addEventListener("touchstart", handleStart, false);

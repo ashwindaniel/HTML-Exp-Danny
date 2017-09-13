@@ -1,20 +1,51 @@
+<script>
+    $(document).ready(function () {
+        $("#bottn").click(function () {
+            $("#exampleModal").modal();
+        });
+    });
+</script>
 <article>
+    <p>div0</p>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <p>Div1</p>
+        <div class="modal-dialog" role="document">
+            <p>div2</p>
+            <div class="modal-content">
+                <p>div3</p>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <h1>Form valiadations here</h1>
-    <form class="formBox">
+    <form class="formBox" onsubmit="onsub()">
         <fieldset>
             <legend>Form Inputs</legend>
 
             <label draggable="true" for="textBox">Enter Name:</label>
             <br>
-            <input data-toggle="tooltip" data-placement="top" title="Full Name as per the Secondary School certificate" type="text" id="textBox"
+            <input data-toggle="tooltip" data-placement="top" title="Full Name as per the Secondary School certificate" type="text" id="name"
                 name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z .]+">
             <br>
             <br>
 
             <label draggable="true" for="email">Enter Email:</label>
             <br>
-            <input data-toggle="tooltip" data-placement="top" title="Valid Email ID" type="text" id="textBox" type="email" id="email"
-                name="Enter email" value="" placeholder="Your Email">
+            <input data-toggle="tooltip" data-placement="top" title="Valid Email ID" type="email" id="email" name="Enter email" value=""
+                placeholder="Your Email">
             <br>
             <br>
 
@@ -27,8 +58,8 @@
 
             <label draggable="true" for="password">Confirm password:</label>
             <br>
-            <input data-toggle="tooltip" data-placement="top" title="Confirm the same password again" type="password" id="password" name="Enter password"
-                value="" placeholder="Confirm again" pattern="[a-zA-Z0-9 .]+">
+            <input data-toggle="tooltip" data-placement="top" title="Confirm the same password again" type="password" id="passwordcopy"
+                name="Enter password" value="" placeholder="Confirm again" pattern="[a-zA-Z0-9 .]+">
             <br>
             <br>
 
@@ -72,7 +103,7 @@
             <br>
             <br>
 
-            <button type="submit" onclick="confirm('Form looks good!')">Lets get the Form started</button>
+            <button type="submit" id="bottn">Lets get the Form started</button>
         </fieldset>
 
     </form>
