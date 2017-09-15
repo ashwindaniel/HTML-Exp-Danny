@@ -96,8 +96,7 @@ table input {
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
+    position: sticky;
 }
 
 .tooltip .tooltiptext {

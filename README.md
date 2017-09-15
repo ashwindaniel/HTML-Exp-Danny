@@ -32,7 +32,7 @@
     3. [x] Angularjs
     4. [x] Introduction
     5. [x] Values, Types, and Operators
-    6. [ ] Program Structure
+    6. [x] Program Structure
     7. [ ] Functions
     8. [ ] Data Structures: Objects and Arrays
     9. [ ] Bugs and Error Handling
@@ -75,7 +75,7 @@
     4. [ ] Handling Events
     5. [ ] HTTP
     6. [x] Node.js
-    7. [ ] Front-end Build Tools
+    7. [x] Front-end Build Tools
 
 > The build requires Node.js ^6.9.1 at the time of development will update if need be
 

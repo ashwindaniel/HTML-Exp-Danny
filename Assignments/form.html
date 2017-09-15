@@ -6,6 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
+    <script>
+        function check() {
+            var name = document.getElementById("name").value;
+            console.log(name);
+        }
+    </script>
 </head>
 
 <body>
@@ -15,9 +21,10 @@
             <fieldset>
                 <legend>Form Inputs</legend>
                 <div class="tooltip">
-                    <label draggable="true" for="textBox1"> Enter Name:</label>
+                    <label draggable="true" for="name"> Enter Name:</label>
                     <br>
-                    <input type="text" id="textBox1" name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z ]+">
+                    <input type="text" id="name" name="Enter Text" value="" placeholder="Your Name" pattern="[a-zA-Z ]+">
+                    <span id="name error"></span>
                     <span class="tooltiptext">Your Full Name As Per Your Respective Secondary School Certificate</span>
                     <br>
                     <br>
@@ -36,18 +43,20 @@
 
                 <label draggable="true" for="radioButton">Gender:</label>
                 <br>
-                <input type="radio" id="radioButton" name="choose" value="okay" checked>Male<br>
-                <input type="radio" id="radioButton" name="choose" value="good">Female<br>
+                <input type="radio" id="radioButton" name="choose" value="okay" checked>Male
+                <br>
+                <input type="radio" id="radioButton" name="choose" value="good">Female
+                <br>
                 <br>
                 <br>
 
                 <div class="tooltip">
                     <label draggable="true" for="check">Employee status:</label>
                     <br>
-                    <input type="checkbox" id="check" name="select" value="Satisfied" placeholder="Check it" checked>Full
-                    Time
+                    <input type="checkbox" id="check" name="select" value="Satisfied" placeholder="Check it" checked>Full Time
                     <br>
-                    <input type="checkbox" id="check" name="select" value="Unsatisfied" placeholder="Check it">Probation<br>
+                    <input type="checkbox" id="check" name="select" value="Unsatisfied" placeholder="Check it">Probation
+                    <br>
                     <span class="tooltiptext">Select all that are applicable</span>
                     <br>
                     <br>
@@ -57,7 +66,8 @@
                 <div class="tooltip">
                     <label draggable="true" for="datalist">Department:</label>
                     <br>
-                    <input type="list" list="array" id="datalist" name="select" placeholder="Select Your Department"><br>
+                    <input type="list" list="array" id="datalist" name="select" placeholder="Select Your Department">
+                    <br>
                     <span class="tooltiptext">Select one, Else Type Your Other Option</span>
                     <datalist id="array">
                         <option value="Java"></option>
@@ -84,7 +94,7 @@
 
                 <label draggable="true" for="file">Pick file:</label>
                 <br>
-                <input type="file" id="file" required>
+                <input type="file" id="file">
                 <br>
                 <br>
 
@@ -94,7 +104,8 @@
                 <br>
                 <br>
 
-                <input type="image" src="approved.png" onclick="alert('Submit Test');">
+                <input type="image" src="approved.png" onclick="check()">
+                <!-- onclick="alert('Submit Test');"> -->
             </fieldset>
         </form>
     </article>
