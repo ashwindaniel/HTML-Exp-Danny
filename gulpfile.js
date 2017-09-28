@@ -129,8 +129,8 @@ gulp.task('build', ['jscopy', 'csscopy'], function () {
     gulp.src('Source/js/dependencies/**/*')
         .pipe(gulp.dest('bin/js/dependencies'));
 
-    gulp.src('Source/css/dependencies/**/*')
-        .pipe(gulp.dest('bin/css/dependencies'));
+    gulp.src('Source/css/min')
+        .pipe(gulp.dest('bin/css'));
 
     gulp.src('Source/img/**/*')
         .pipe(gulp.dest('bin/img'));
@@ -144,4 +144,4 @@ gulp.task('build', ['jscopy', 'csscopy'], function () {
     console.log("Initial setup completed");
 });
 
-gulp.task('default', ['build', 'watching'], function () {});
+gulp.task('default', ['build', 'watching'], function () { });
