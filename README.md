@@ -8,7 +8,7 @@
     4. [x] Cache and other Offline things
     5. [x] Forms
     6. [x] Drag and drop
-    7. [ ] Websockets
+    7. [x] Websockets
     8. [x] Server-sent Events
     9. [x] Custom Elements (Webcomponents)
     10. [x] Editable content
@@ -20,7 +20,7 @@
 - [x] CSS
     1. [x] Syntax of scss and css
     2. [x] Bootstrap
-    3. [ ] Flexbox
+    3. [x] Flexbox
     4. [x] Transitions and animations
     5. [x] Multi-column layout
     6. [x] Selectors and pseudo-classes
@@ -33,34 +33,34 @@
     4. [x] Introduction
     5. [x] Values, Types, and Operators
     6. [x] Program Structure
-    7. [ ] Functions
-    8. [ ] Data Structures: Objects and Arrays
-    9. [ ] Bugs and Error Handling
-    10. [ ] JavaScript and the Browser
-    11. [ ] The Document Object Model
-    12. [ ] Forms and Form Fields
+    7. [x] Functions
+    8. [x] Data Structures: Objects and Arrays
+    9. [x] Bugs and Error Handling
+    10. [x] JavaScript and the Browser
+    11. [x] The Document Object Model
+    12. [x] Forms and Form Fields
 
-- [ ] ES6
+- [x] ES6
     1. [x] Introduction
-    2. [ ] Block Bindings
-    3. [ ] Functions
-    4. [ ] Expanded Object Functionality
-    5. [ ] Sets and Maps
-    6. [ ] Iterators and Generators
-    7. [ ] Introducing Javascript Classes
+    2. [x] Block Bindings
+    3. [x] Functions
+    4. [x] Expanded Object Functionality
+    5. [x] Sets and Maps
+    6. [x] Iterators and Generators
+    7. [x] Introducing Javascript Classes
     8. [ ] Promises and Asynchronous Programming
-    9. [ ] Encapsulating Code with Modules
+    9. [x] Encapsulating Code with Modules
 
 - [x] Angular 4
     1. [x] Introduction
     2. [x] CLI
     3. [ ] Tower of Hero
     4. [ ] Hero Editor
-    5. [ ] Master/Detail
-    6. [ ] Multiple Components
-    7. [ ] Services
-    8. [ ] Routing
-    9. [ ] HTTP
+    5. [x] Master/Detail
+    6. [x] Multiple Components
+    7. [x] Services
+    8. [x] Routing
+    9. [x] HTTP
 
 - [x] Gulp
     1. [x] Basic features .src .dest .task .watch
@@ -71,9 +71,9 @@
 - [x] Misc
     1. [x] Higher-order Functions
     2. [x] Regular Expressions
-    3. [ ] Modules
-    4. [ ] Handling Events
-    5. [ ] HTTP
+    3. [x] Modules
+    4. [x] Handling Events
+    5. [x] HTTP
     6. [x] Node.js
     7. [x] Front-end Build Tools
 
